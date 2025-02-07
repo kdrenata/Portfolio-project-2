@@ -32,7 +32,7 @@ export const Skills = () => {
     );
 };
 
-const StyledSkills = styled.div`
+const StyledSkills = styled.section`
     background-color: #b9dbe3;
     min-height: 100vh;
 `
