@@ -10,7 +10,7 @@ export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                <FlexWrapper align={"center"} justufy={'space-between'}>
+                <FlexWrapper align={"center"} justufy={'space-around'}>
                     <BlockWrapper>
                         <SmallText>Hi There</SmallText>
                         <Name>I am <span>Renata Kudinova</span></Name>
@@ -52,11 +52,13 @@ const PhotoWrapper = styled.div`
 const Photo = styled.img`
     width: 350px;
     height: 430px;
+    object-fit: cover;
 
 `
 const SmallText = styled.span`
     font-size: 14px;
     font-weight: 400;
+    display: flex;
 `
 
 const Name = styled.h2`
@@ -87,4 +89,5 @@ const Name = styled.h2`
 const MainTitle = styled.h1`
     font-size: 27px;
     font-weight: 400;
+    display: flex;
 `
