@@ -96,12 +96,12 @@ const Image = styled.img`
     object-fit: cover;
 `
 const Description = styled.div`
-    padding: 25px 20px;
+    padding: 27px 20px;
 `
 
 const Title = styled.h3`
     
 `
 const Text = styled.p`
-    margin: 14px 0 10px;
+    margin: 14px 0 12px;
 `
