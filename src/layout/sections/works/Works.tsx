@@ -1,37 +1,44 @@
-// import React from 'react';
+import React from 'react';
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 
-const worksItems = ['ALL', 'LANDING PAGE', 'REACT', 'SPA']
-
-import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle.tsx";
 import {TabMenu} from "./tabMenu/TabMenu.tsx";
 import {Work} from "./work/Work.tsx";
 import socialImg from "../../../assets/images/proj1.png";
 import timerImg from "../../../assets/images/proj2.png";
 import {Container} from "../../../components/Container.tsx";
+import {S} from './Works_Styles.ts'
 
-export const Works = () => {
+const worksItems = ['ALL', 'LANDING PAGE', 'REACT', 'SPA']
+
+const workData = [
+    {
+        title: 'Social Network',
+        src: socialImg,
+        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+    },
+    {
+        title: 'Timer',
+        src: timerImg,
+        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+    }
+]
+
+export const Works: React.FC = () => {
     return (
-        <StyledWorks>
+        <S.Works>
             <Container>
                 <SectionTitle>My Works</SectionTitle>
                 <TabMenu menuItems={worksItems}/>
                 <FlexWrapper justufy={'space-between'} align={'flex-start'} wrap={'wrap'}>
-                    <Work title={'Social Network'}
-                          src={socialImg}
-                          text={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.'}/>
 
-                    <Work title={'Timer'}
-                          src={timerImg}
-                          text={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit ut labore et dolore magna aliqua Ut enim'}/>
+                    {workData.map((w) => {
+                        return <Work title={w.title}
+                                     src={w.src}
+                                     text={w.text}/>
+                    })}
                 </FlexWrapper>
             </Container>
-        </StyledWorks>
+        </S.Works>
     );
 };
-const StyledWorks = styled.section`
-    ${FlexWrapper} {
-        gap: 30px;
-    }
-`
