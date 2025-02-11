@@ -1,6 +1,6 @@
 import React from 'react';
 import {Icon} from "../../../../components/icon/Icon.tsx";
-import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
+import {FlexWrapper} from "../../../../components/FlexWrapper.ts";
 import {S} from './../Skills_Styles.ts'
 
 type SkillPropsType = {

@@ -1,8 +1,8 @@
 import React from 'react';
-import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
-import {SectionTitle} from "../../../components/SectionTitle.tsx";
+import {FlexWrapper} from "../../../components/FlexWrapper.ts";
+import {SectionTitle} from "../../../components/SectionTitle.ts";
 import {Skill} from "./skill/Skill.tsx";
-import {Container} from "../../../components/Container.tsx";
+import {Container} from "../../../components/Container.ts";
 import {S} from './Skills_Styles.ts'
 
 const skillData = [
